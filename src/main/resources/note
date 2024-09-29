@@ -1,0 +1,45 @@
+在船舶进港管理系统中，核心功能可以分为几个模块，主要围绕 CRUD（创建、读取、更新、删除）操作来管理船舶、泊位、进出港记录等。以下是详细的功能模块建议：
+
+< main using >   user<Port Operators> and <Port Managers>
+1. 船舶管理（Vessel Management）
+新增船舶（Create Vessel）：添加新船舶的基本信息，如船舶名称、吨位、所属公司等。
+查询船舶（Read Vessel）：查看已有船舶的详细信息，如船舶状态、当前位置等。
+更新船舶信息（Update Vessel）：修改船舶的相关信息，如更新所属公司、吨位等。
+删除船舶记录（Delete Vessel）：删除不再需要的船舶记录。
+
+2. 进港/离港管理（Arrival and Departure Management）
+记录船舶进港时间（Log Vessel Arrival）：记录船舶的到港时间，分配泊位。
+记录船舶离港时间（Log Vessel Departure）：记录船舶的离港时间，并释放泊位。
+更新进港/离港信息（Update Arrival/Departure Info）：修改错误的进港或离港时间，或更新船舶在港期间的状态。
+查询进港/离港记录（View Arrival/Departure Records）：查看历史上所有船舶的进出港记录，包括船舶名称、时间、泊位等信息。
+
+3. 泊位管理（Berth Management）
+新增泊位（Create Berth）：创建新的泊位信息。
+查询泊位使用状态（View Berth Status）：查看泊位的当前状态（空闲或被占用），以及预计的可用时间。
+更新泊位状态（Update Berth Status）：更新泊位的状态，比如正在维护、不可用等。
+删除泊位（Delete Berth）：删除已停用的泊位记录。
+< main >
+
+<sub using>
+4. 泊位使用率计算（Berth Utilization Calculation）
+实时查看泊位使用情况（Real-Time Berth Usage）：根据当前船舶的进出港情况，显示泊位的实时使用率（如总泊位数、已占用泊位数、空闲泊位数）。
+历史泊位使用报告（Berth Utilization Report）：生成一段时间内的泊位使用报告，显示某个时间段内泊位的使用率，帮助进行港口资源的优化。
+
+5. 报告生成（Report Generation）
+船舶进出港报告（Vessel Arrival/Departure Report）：生成某段时间内船舶的进出港记录报告，包含船舶名称、进出港时间、停靠泊位等信息。
+泊位使用率报告（Berth Utilization Report）：生成泊位的使用统计，帮助港口管理者更好地安排资源。
+
+6. 用户管理（User Management, Optional）
+用户注册和登录（User Registration and Login）：创建新用户（管理员、操作员等），并管理权限。
+权限管理（Permission Management）：不同级别的用户拥有不同的操作权限，如普通操作员只能查看记录，管理员可以修改数据。
+
+7. 数据导出功能（Data Export）
+导出进出港记录（Export Arrival/Departure Records）：将进出港的记录导出为 CSV、Excel 或 PDF 文件，便于后续分析和存档。
+
+8. 数据备份与恢复（Data Backup & Restore, Optional）
+备份数据（Backup Data）：定期备份系统中的数据，确保数据的安全。
+恢复数据（Restore Data）：从备份中恢复数据，以防数据丢失。
+
+功能总结：
+这个系统的核心功能包括对船舶的管理、进出港记录的维护、泊位的状态跟踪和使用率计算。此外，可以通过报告生成和用户权限管理等功能，确保系统的操作安全和数据的可用性。如果你想要扩展功能，也可以考虑增加一些高级功能，例如与外部系统的集成（如天气预报系统或物流系统）。
+
